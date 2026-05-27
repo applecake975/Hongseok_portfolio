@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>언어 선택</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Pretendard+JP:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="hero">
+        <div class="hero__space">
+          <img class="planet planet--sun" src="imgs/01_sun.png" alt="Sun" />
+          <img class="planet planet--neptune" src="imgs/06_neptune.png" alt="Neptune" />
+          <img class="planet planet--saturn" src="imgs/04_saturn.png" alt="Saturn" />
+          <img class="planet planet--uranus" src="imgs/05_uranus.png" alt="Uranus" />
+          <img class="planet planet--earth" src="imgs/02_earth.png" alt="Earth" />
+          <img class="planet planet--mars" src="imgs/07_mars.png" alt="Mars" />
+          <img class="planet planet--orange" src="imgs/08_orange_planet.png" alt="Orange planet" />
+          <img class="planet planet--moon" src="imgs/10_moon.png" alt="Moon" />
+        </div>
+        <div class="hero__content">
+          <h1 class="hero__title" aria-live="polite">
+            <span class="title-text title-text--ko">언어를 선택하세요.</span>
+            <span class="title-text title-text--ja">言語を選択してください。</span>
+            <span class="title-text title-text--en">Choose your language.</span>
+          </h1>
+          <div class="language-buttons">
+            <button class="language-button" type="button" data-language="ko">한국어</button>
+            <button class="language-button" type="button" data-language="ja">日本語</button>
+            <button class="language-button" type="button" data-language="en">English</button>
+          </div>
+        </div>
+      </div>
+      <section class="portfolio-screen" aria-label="포트폴리오 소개">
+        <div class="portfolio-copy portfolio-copy--ko">
+          <p class="portfolio-eyebrow">언어를 넘어 연결하는 디자인</p>
+          <h2>
+            <span>디자인으로 만드는</span>
+            <strong>글로벌 연결</strong>
+          </h2>
+          <p class="portfolio-description">
+            한국어, 영어, 일본어를 바탕으로 언어가 달라도 자연스럽게 사용할 수 있고,<br />
+            소비자가 서비스의 의도를 바로 이해할 수 있는 UX를 고민하는 디자이너 입니다.
+          </p>
+        </div>
+        <div class="portfolio-copy portfolio-copy--ja">
+          <p class="portfolio-eyebrow">言語を超えてつなぐデザイン</p>
+          <h2>
+            <span>デザインで作る</span>
+            <strong>グローバルなつながり</strong>
+          </h2>
+          <p class="portfolio-description">
+            韓国語・英語・日本語をベースに、言語が異なっていても自然に使うことができ、<br />
+            消費者がサービスの意図をすぐに理解できるUXを考えるデザイナーです。
+          </p>
+        </div>
+        <div class="portfolio-copy portfolio-copy--en">
+          <p class="portfolio-eyebrow">Designing connections beyond language</p>
+          <h2>
+            <span>Global Connection</span>
+            <strong>by Design</strong>
+          </h2>
+          <p class="portfolio-description">
+            I'm a designer focused on creating UX that feels natural across languages<br />
+            and helps users easily understand the intent of a service.
+          </p>
+        </div>
+        <a class="portfolio-cta" href="#" aria-label="포트폴리오로 이동하기">
+          <span class="portfolio-cta-fill" aria-hidden="true"></span>
+          <span class="portfolio-cta-hover-ring" aria-hidden="true"></span>
+          <span class="portfolio-cta-hover-ring portfolio-cta-hover-ring--delay" aria-hidden="true"></span>
+          <span class="cta-text cta-text--ko">이동하기</span>
+          <span class="cta-text cta-text--ja">移動する</span>
+          <span class="cta-text cta-text--en">Enter</span>
+        </a>
+        <div class="portfolio-world-stage" aria-hidden="true">
+          <img class="portfolio-world portfolio-world--ko" src="imgs/korean 1.png" alt="" />
+          <img class="portfolio-world portfolio-world--ja" src="imgs/Japan 1.png" alt="" />
+          <img class="portfolio-world portfolio-world--en" src="imgs/English 1.png" alt="" />
+        </div>
+      </section>
+      <section class="korea-main-screen" aria-label="한국어 메인 화면">
+        <img class="korea-main-bg korea-main-bg--ko is-active" src="imgs/korea_background.png" alt="서울 골목과 남산 풍경" />
+        <img class="korea-main-bg korea-main-bg--ja" src="imgs/japan_background.png" alt="일본 거리 풍경" />
+        <img class="korea-main-bg korea-main-bg--en" src="imgs/us.background.png" alt="미국 거리 풍경" />
+        <div class="main-nav-group">
+          <div class="main-language-nav" aria-label="언어 선택">
+            <button class="main-language-button is-active" type="button" data-main-language="ko">KOR</button>
+            <button class="main-language-button" type="button" data-main-language="ja">JPN</button>
+            <button class="main-language-button" type="button" data-main-language="en">ENG</button>
+          </div>
+          <div class="main-action-nav" aria-label="주요 메뉴">
+            <button class="main-action-button" type="button" data-main-action="works">작업물 보기</button>
+            <button class="main-action-button" type="button" data-main-action="about">자기소개</button>
+            <button class="main-action-button" type="button" data-main-action="contact">연락하기</button>
+          </div>
+        </div>
+        <div class="korea-guide-bubble">궁금한 항목을 선택해주세요.</div>
+        <img class="korea-guide-character" src="imgs/stand_me.png" alt="안내하는 디자이너 캐릭터" />
+        <aside class="contact-phone" aria-label="연락처">
+          <div class="phone-status">
+            <span>9:41</span>
+            <div class="phone-status-icons" aria-hidden="true">
+              <span class="signal-icon"></span>
+              <span class="wifi-icon"></span>
+              <span class="battery-icon"></span>
+            </div>
+          </div>
+          <header class="phone-header">
+            <span class="phone-back" aria-hidden="true"></span>
+            <h2>
+              <span class="phone-text phone-text--ko">연락처</span>
+              <span class="phone-text phone-text--ja">連絡先</span>
+              <span class="phone-text phone-text--en">Contact</span>
+            </h2>
+            <div class="phone-header-icons" aria-hidden="true">
+              <span class="phone-search"></span>
+              <span class="phone-menu"></span>
+            </div>
+          </header>
+          <div class="phone-profile">
+            <img src="imgs/about.png" alt="" />
+            <strong>
+              <span class="phone-text phone-text--ko">최홍석</span>
+              <span class="phone-text phone-text--ja">チェ ホンソク</span>
+              <span class="phone-text phone-text--en">Choi hongseok</span>
+            </strong>
+          </div>
+          <dl class="phone-contact-list">
+            <div>
+              <dt>
+                <span class="phone-text phone-text--ko">이메일</span>
+                <span class="phone-text phone-text--ja">メールアドレス</span>
+                <span class="phone-text phone-text--en">E-mail</span>
+              </dt>
+              <dd>applecake975@gmail.com</dd>
+            </div>
+            <div>
+              <dt>
+                <span class="phone-text phone-text--ko">전화번호</span>
+                <span class="phone-text phone-text--ja">電話番号</span>
+                <span class="phone-text phone-text--en">Phone number</span>
+              </dt>
+              <dd>010-5845-0421</dd>
+            </div>
+          </dl>
+          <div class="phone-actions">
+            <a class="phone-action phone-action--call" href="tel:01058450421">
+              <span class="phone-text phone-text--ko">전화하기</span>
+              <span class="phone-text phone-text--ja">電話する</span>
+              <span class="phone-text phone-text--en">Call</span>
+            </a>
+            <a class="phone-action phone-action--mail" href="mailto:applecake975@gmail.com">
+              <span class="phone-text phone-text--ko">이메일 보내기</span>
+              <span class="phone-text phone-text--ja">メールを送る</span>
+              <span class="phone-text phone-text--en">Send an email</span>
+            </a>
+          </div>
+          <span class="phone-home-indicator" aria-hidden="true"></span>
+        </aside>
+      </section>
+    </main>
+    <script>
+      const languageButtons = document.querySelectorAll(".language-button");
+      const mainLanguageButtons = document.querySelectorAll(".main-language-button");
+      const mainActionButtons = document.querySelectorAll(".main-action-button");
+      const mainBackgrounds = document.querySelectorAll(".korea-main-bg");
+      const portfolioCta = document.querySelector(".portfolio-cta");
+      const transitionDuration = 2400;
+      let nextScreenTimer;
+
+      const setMainLanguage = (language) => {
+        document.body.dataset.mainLanguage = language;
+
+        mainBackgrounds.forEach((background) => {
+          background.classList.toggle("is-active", background.classList.contains(`korea-main-bg--${language}`));
+        });
+
+        mainLanguageButtons.forEach((button) => {
+          button.classList.toggle("is-active", button.dataset.mainLanguage === language);
+        });
+      };
+
+      languageButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          if (document.body.classList.contains("is-earth-closing")) return;
+
+          document.body.dataset.selectedLanguage = button.dataset.language;
+          document.body.classList.add("is-earth-closing");
+          languageButtons.forEach((languageButton) => {
+            languageButton.disabled = true;
+          });
+
+          nextScreenTimer = window.setTimeout(() => {
+            document.body.classList.add("is-next-visible");
+          }, transitionDuration);
+        });
+      });
+
+      window.addEventListener("pageshow", () => {
+        window.clearTimeout(nextScreenTimer);
+        document.body.classList.remove("is-earth-closing");
+        document.body.classList.remove("is-next-visible");
+        document.body.classList.remove("is-korea-main-visible");
+        delete document.body.dataset.selectedLanguage;
+        delete document.body.dataset.mainLanguage;
+        languageButtons.forEach((button) => {
+          button.disabled = false;
+        });
+        setMainLanguage("ko");
+      });
+
+      mainLanguageButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          setMainLanguage(button.dataset.mainLanguage);
+        });
+      });
+
+      mainActionButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const isContact = button.dataset.mainAction === "contact";
+          document.body.classList.toggle("is-contact-visible", isContact);
+
+          mainActionButtons.forEach((actionButton) => {
+            actionButton.classList.toggle("is-active", actionButton === button && isContact);
+          });
+        });
+      });
+
+      portfolioCta.addEventListener("click", (event) => {
+        const selectedLanguage = document.body.dataset.selectedLanguage;
+        if (!selectedLanguage) return;
+
+        event.preventDefault();
+        setMainLanguage(selectedLanguage);
+        document.body.classList.add("is-korea-main-visible");
+      });
+    </script>
+  </body>
+</html>
