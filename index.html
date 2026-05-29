@@ -15,6 +15,7 @@
   <body>
     <main class="page-shell">
       <div class="hero">
+        <canvas class="planet-scene" aria-hidden="true"></canvas>
         <div class="hero__space">
           <img class="planet planet--sun" src="imgs/01_sun.png" alt="Sun" />
           <img class="planet planet--neptune" src="imgs/06_neptune.png" alt="Neptune" />
@@ -27,9 +28,7 @@
         </div>
         <div class="hero__content">
           <h1 class="hero__title" aria-live="polite">
-            <span class="title-text title-text--ko">언어를 선택하세요.</span>
-            <span class="title-text title-text--ja">言語を選択してください。</span>
-            <span class="title-text title-text--en">Choose your language.</span>
+            <span class="title-text"></span>
           </h1>
           <div class="language-buttons">
             <button class="language-button" type="button" data-language="ko">한국어</button>
@@ -81,9 +80,9 @@
           <span class="cta-text cta-text--en">Enter</span>
         </a>
         <div class="portfolio-world-stage" aria-hidden="true">
-          <img class="portfolio-world portfolio-world--ko" src="imgs/korean 1.png" alt="" />
-          <img class="portfolio-world portfolio-world--ja" src="imgs/Japan 1.png" alt="" />
-          <img class="portfolio-world portfolio-world--en" src="imgs/English 1.png" alt="" />
+          <img class="portfolio-world portfolio-world--ko" src="imgs/korean 1@3x-resampled.png" alt="" />
+          <img class="portfolio-world portfolio-world--ja" src="imgs/Japan 1@3x-resampled.png" alt="" />
+          <img class="portfolio-world portfolio-world--en" src="imgs/English 1@3x-resampled.png" alt="" />
         </div>
       </section>
       <section class="korea-main-screen" aria-label="한국어 메인 화면">
@@ -102,8 +101,256 @@
             <button class="main-action-button" type="button" data-main-action="contact">연락하기</button>
           </div>
         </div>
-        <div class="korea-guide-bubble">궁금한 항목을 선택해주세요.</div>
-        <img class="korea-guide-character" src="imgs/stand_me.png" alt="안내하는 디자이너 캐릭터" />
+        <div class="korea-guide-bubble">
+          <span class="guide-bubble-text guide-bubble-text--ko">궁금한 항목을 선택해주세요.</span>
+          <span class="guide-bubble-text guide-bubble-text--ja">気になる項目を選んでください。</span>
+        </div>
+        <div class="korea-guide-character" aria-label="안내하는 디자이너 캐릭터">
+          <img class="guide-character-image guide-character-image--stand" src="imgs/stand_me.png" alt="" />
+          <img class="guide-character-image guide-character-image--call" src="imgs/call_me.png" alt="" />
+        </div>
+        <section class="works-gallery" aria-label="작업물 목록" data-active-slide="0">
+          <button class="works-nav works-nav--prev" type="button" data-works-direction="-1" aria-label="이전 작업물">
+            <span aria-hidden="true"></span>
+          </button>
+          <div class="works-track">
+            <div class="works-slide is-active">
+              <article class="work-card">
+                <div class="work-card-media">
+                  <img src="imgs/Frame 2147238517.png" alt="11번가 앱 리디자인 화면" />
+                  <a
+                    class="work-link-badge"
+                    href="https://www.figma.com/proto/3jqAZBATp5j77dvvzgEW46/%ED%8F%AC%EC%8A%A4%ED%8F%B4%EB%A6%AC%EC%98%A4-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85?node-id=0-1&t=KLvdkQp8v96VQvIA-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="11번가 개인작업 피그마로 이동"
+                  >
+                    <span>
+                      <span class="work-text work-text--ko">개인작업</span>
+                      <span class="work-text work-text--ja">個人</span>
+                      <span class="work-text work-text--en">Personal</span>
+                      <br />
+                      <span class="work-link-meta">
+                        <span class="work-text work-text--ko">(피그마)</span>
+                        <span class="work-text work-text--ja">(Figma)</span>
+                        <span class="work-text work-text--en">(Figma)</span>
+                      </span>
+                    </span>
+                    <strong aria-hidden="true"><img src="imgs/arrow.svg" alt="" /></strong>
+                  </a>
+                </div>
+                <div class="work-card-copy">
+                  <h3>
+                    <span class="work-text work-text--ko">11번가</span>
+                    <span class="work-text work-text--ja">11番街</span>
+                    <span class="work-text work-text--en">11st</span>
+                  </h3>
+                  <p>
+                    <span class="work-text work-text--ko">복잡한 쇼핑 경험을 한 눈에 들어오게 개선한 11번가 리디자인.</span>
+                    <span class="work-text work-text--ja">複雑なショッピング体験を一目で分かるように改善した11番街のリデザイン。</span>
+                    <span class="work-text work-text--en">A redesign of 11st that makes a complex shopping experience easier to scan.</span>
+                  </p>
+                </div>
+              </article>
+              <article class="work-card">
+                <div class="work-card-media">
+                  <img src="imgs/Frame 2147238517-1.png" alt="집사인생 앱 화면" />
+                  <div class="work-link-stack">
+                    <a class="work-link-badge" href="#" aria-label="집사인생 팀작업 웹으로 이동">
+                      <span>
+                        <span class="work-text work-text--ko">팀작업</span>
+                        <span class="work-text work-text--ja">チーム</span>
+                        <span class="work-text work-text--en">Team</span>
+                        <br />
+                        <span class="work-link-meta">
+                          <span class="work-text work-text--ko">(웹)</span>
+                          <span class="work-text work-text--ja">(Web)</span>
+                          <span class="work-text work-text--en">(Web)</span>
+                        </span>
+                      </span>
+                      <strong aria-hidden="true"><img src="imgs/arrow.svg" alt="" /></strong>
+                    </a>
+                    <a class="work-link-badge" href="#" aria-label="집사인생 기획서 피그마로 이동">
+                      <span>
+                        <span class="work-text work-text--ko">기획서</span>
+                        <span class="work-text work-text--ja">企画書</span>
+                        <span class="work-text work-text--en">Planning</span>
+                        <br />
+                        <span class="work-link-meta">
+                          <span class="work-text work-text--ko">(피그마)</span>
+                          <span class="work-text work-text--ja">(Figma)</span>
+                          <span class="work-text work-text--en">(Figma)</span>
+                        </span>
+                      </span>
+                      <strong aria-hidden="true"><img src="imgs/arrow.svg" alt="" /></strong>
+                    </a>
+                  </div>
+                </div>
+                <div class="work-card-copy">
+                  <h3>
+                    <span class="work-text work-text--ko">집사인생</span>
+                    <span class="work-text work-text--ja">執事人生</span>
+                    <span class="work-text work-text--en">Jipsa Life</span>
+                  </h3>
+                  <p>
+                    <span class="work-text work-text--ko">기록과 인공지능 분석을 통해 우리 반려동물의 건강 변화를 관리하는 케어 앱.</span>
+                    <span class="work-text work-text--ja">記録とAI分析でペットの健康変化を管理するケアアプリ。</span>
+                    <span class="work-text work-text--en">A care app that tracks pet health changes through records and AI analysis.</span>
+                  </p>
+                </div>
+              </article>
+              <article class="work-card">
+                <div class="work-card-media">
+                  <img src="imgs/Frame 2147238517-2.png" alt="누비오 앱 화면" />
+                  <a class="work-link-badge" href="#" aria-label="누비오 개인작업 피그마로 이동">
+                    <span>
+                      <span class="work-text work-text--ko">개인작업</span>
+                      <span class="work-text work-text--ja">個人</span>
+                      <span class="work-text work-text--en">Personal</span>
+                      <br />
+                      <span class="work-link-meta">
+                        <span class="work-text work-text--ko">(피그마)</span>
+                        <span class="work-text work-text--ja">(Figma)</span>
+                        <span class="work-text work-text--en">(Figma)</span>
+                      </span>
+                    </span>
+                    <strong aria-hidden="true"><img src="imgs/arrow.svg" alt="" /></strong>
+                  </a>
+                </div>
+                <div class="work-card-copy">
+                  <h3>
+                    <span class="work-text work-text--ko">누비오</span>
+                    <span class="work-text work-text--ja">ヌビオ</span>
+                    <span class="work-text work-text--en">Nubio</span>
+                  </h3>
+                  <p>
+                    <span class="work-text work-text--ko">인공지능을 활용해서 언어의 뉘앙스를 익히는 미션형 언어 학습 앱.</span>
+                    <span class="work-text work-text--ja">AIを活用して言葉のニュアンスを学ぶミッション型言語学習アプリ。</span>
+                    <span class="work-text work-text--en">A mission-based language learning app for practicing nuance with AI.</span>
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="works-slide">
+              <article class="work-card">
+                <div class="work-card-media">
+                  <img src="imgs/zoom.png" alt="줌 앱 리디자인 화면" />
+                  <a class="work-link-badge" href="#" aria-label="줌 개인작업 피그마로 이동">
+                    <span>
+                      <span class="work-text work-text--ko">개인작업</span>
+                      <span class="work-text work-text--ja">個人</span>
+                      <span class="work-text work-text--en">Personal</span>
+                      <br />
+                      <span class="work-link-meta">
+                        <span class="work-text work-text--ko">(피그마)</span>
+                        <span class="work-text work-text--ja">(Figma)</span>
+                        <span class="work-text work-text--en">(Figma)</span>
+                      </span>
+                    </span>
+                    <strong aria-hidden="true"><img src="imgs/arrow.svg" alt="" /></strong>
+                  </a>
+                </div>
+                <div class="work-card-copy">
+                  <h3>
+                    <span class="work-text work-text--ko">줌</span>
+                    <span class="work-text work-text--ja">Zoom</span>
+                    <span class="work-text work-text--en">Zoom</span>
+                  </h3>
+                  <p>
+                    <span class="work-text work-text--ko">회의 목록 탐색성과 접근성을 개선한 줌 리디자인.</span>
+                    <span class="work-text work-text--ja">会議リストの探索性とアクセシビリティを改善したZoomリデザイン。</span>
+                    <span class="work-text work-text--en">A Zoom redesign improving meeting list navigation and accessibility.</span>
+                  </p>
+                </div>
+              </article>
+              <article class="work-card">
+                <div class="work-card-media">
+                  <img src="imgs/peyoung.png" alt="페양그 웹 리디자인 화면" />
+                  <a class="work-link-badge" href="#" aria-label="페양그 개인작업 피그마로 이동">
+                    <span>
+                      <span class="work-text work-text--ko">개인작업</span>
+                      <span class="work-text work-text--ja">個人</span>
+                      <span class="work-text work-text--en">Personal</span>
+                      <br />
+                      <span class="work-link-meta">
+                        <span class="work-text work-text--ko">(피그마)</span>
+                        <span class="work-text work-text--ja">(Figma)</span>
+                        <span class="work-text work-text--en">(Figma)</span>
+                      </span>
+                    </span>
+                    <strong aria-hidden="true"><img src="imgs/arrow.svg" alt="" /></strong>
+                  </a>
+                </div>
+                <div class="work-card-copy">
+                  <h3>
+                    <span class="work-text work-text--ko">페양그</span>
+                    <span class="work-text work-text--ja">ペヤング</span>
+                    <span class="work-text work-text--en">Peyoung</span>
+                  </h3>
+                  <p>
+                    <span class="work-text work-text--ko">브랜드의 제품 경험을 더 명확하게 전달하는 웹 리디자인.</span>
+                    <span class="work-text work-text--ja">ブランドの商品体験をより分かりやすく伝えるWebリデザイン。</span>
+                    <span class="work-text work-text--en">A web redesign that communicates the brand's product experience more clearly.</span>
+                  </p>
+                </div>
+              </article>
+              <article class="work-card">
+                <div class="work-card-media">
+                  <img src="imgs/simmons.png" alt="시몬스 코리아 웹 리디자인 화면" />
+                  <div class="work-link-stack">
+                    <a class="work-link-badge" href="#" aria-label="시몬스 코리아 팀 작업 웹으로 이동">
+                      <span>
+                        <span class="work-text work-text--ko">팀 작업</span>
+                        <span class="work-text work-text--ja">チーム</span>
+                        <span class="work-text work-text--en">Team</span>
+                        <br />
+                        <span class="work-link-meta">
+                          <span class="work-text work-text--ko">(웹)</span>
+                          <span class="work-text work-text--ja">(Web)</span>
+                          <span class="work-text work-text--en">(Web)</span>
+                        </span>
+                      </span>
+                      <strong aria-hidden="true"><img src="imgs/arrow.svg" alt="" /></strong>
+                    </a>
+                    <a class="work-link-badge" href="#" aria-label="시몬스 코리아 기획서 피그마로 이동">
+                      <span>
+                        <span class="work-text work-text--ko">기획서</span>
+                        <span class="work-text work-text--ja">企画書</span>
+                        <span class="work-text work-text--en">Planning</span>
+                        <br />
+                        <span class="work-link-meta">
+                          <span class="work-text work-text--ko">(피그마)</span>
+                          <span class="work-text work-text--ja">(Figma)</span>
+                          <span class="work-text work-text--en">(Figma)</span>
+                        </span>
+                      </span>
+                      <strong aria-hidden="true"><img src="imgs/arrow.svg" alt="" /></strong>
+                    </a>
+                  </div>
+                </div>
+                <div class="work-card-copy">
+                  <h3>
+                    <span class="work-text work-text--ko">시몬스 코리아</span>
+                    <span class="work-text work-text--ja">シモンズコリア</span>
+                    <span class="work-text work-text--en">Simmons Korea</span>
+                  </h3>
+                  <p>
+                    <span class="work-text work-text--ko">프리미엄 침대 브랜드의 분위기와 구매 흐름을 개선한 웹 리디자인.</span>
+                    <span class="work-text work-text--ja">プレミアムベッドブランドの雰囲気と購入導線を改善したWebリデザイン。</span>
+                    <span class="work-text work-text--en">A web redesign improving the mood and purchase flow of a premium bed brand.</span>
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <button class="works-nav works-nav--next" type="button" data-works-direction="1" aria-label="다음 작업물">
+            <span aria-hidden="true"></span>
+          </button>
+          <div class="works-indicator" aria-label="작업물 페이지">
+            <button class="works-indicator-dot is-active" type="button" data-works-slide="0" aria-label="작업물 1페이지"></button>
+            <button class="works-indicator-dot" type="button" data-works-slide="1" aria-label="작업물 2페이지"></button>
+          </div>
+        </section>
         <aside class="contact-phone" aria-label="연락처">
           <div class="phone-status">
             <span>9:41</span>
@@ -152,10 +399,10 @@
             </div>
           </dl>
           <div class="phone-actions">
-            <a class="phone-action phone-action--call" href="tel:01058450421">
-              <span class="phone-text phone-text--ko">전화하기</span>
-              <span class="phone-text phone-text--ja">電話する</span>
-              <span class="phone-text phone-text--en">Call</span>
+            <a class="phone-action phone-action--call" href="#">
+              <span class="phone-text phone-text--ko">오픈채팅 보내기</span>
+              <span class="phone-text phone-text--ja">オープンチャットを送る</span>
+              <span class="phone-text phone-text--en">Send open chat</span>
             </a>
             <a class="phone-action phone-action--mail" href="mailto:applecake975@gmail.com">
               <span class="phone-text phone-text--ko">이메일 보내기</span>
@@ -167,29 +414,762 @@
         </aside>
       </section>
     </main>
-    <script>
+    <script type="module">
       const languageButtons = document.querySelectorAll(".language-button");
+      const languageButtonGroup = document.querySelector(".language-buttons");
       const mainLanguageButtons = document.querySelectorAll(".main-language-button");
       const mainActionButtons = document.querySelectorAll(".main-action-button");
       const mainBackgrounds = document.querySelectorAll(".korea-main-bg");
+      const guideCharacter = document.querySelector(".korea-guide-character");
+      const worksGallery = document.querySelector(".works-gallery");
+      const worksSlides = document.querySelectorAll(".works-slide");
+      const worksNavButtons = document.querySelectorAll(".works-nav");
+      const worksIndicatorDots = document.querySelectorAll(".works-indicator-dot");
+      const titleText = document.querySelector(".title-text");
       const portfolioCta = document.querySelector(".portfolio-cta");
-      const transitionDuration = 2400;
       let nextScreenTimer;
+      let titleTypingTimer;
+      let activeWorksSlide = 0;
+      let activeTitleLanguage = "";
+      let currentTitleText = "";
+      let titleTypingRun = 0;
+      let isPlanetSceneInitialized = false;
+      let resetPlanetScene = () => {};
+      let triggerPlanetClose = () => {};
+
+      const titleLabels = {
+        ko: "언어를 선택하세요.",
+        ja: "言語を選択してください。",
+        en: "Choose your language.",
+      };
+
+      const initPlanetScene = async () => {
+        const canvas = document.querySelector(".planet-scene");
+        const hero = document.querySelector(".hero");
+        if (!canvas || !hero) return;
+
+        const earthDayMapPath = "imgs/earthearth.png";
+
+        const initEarthFallbackScene = async () => {
+          const THREE = await import("https://unpkg.com/three/build/three.module.js");
+          const renderer = new THREE.WebGLRenderer({
+            canvas,
+            alpha: true,
+            antialias: true,
+          });
+          renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+          renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+          const scene = new THREE.Scene();
+          const camera = new THREE.PerspectiveCamera(25, 1, 0.1, 100);
+          camera.position.set(4.5, 2, 3);
+
+          const sun = new THREE.DirectionalLight("#ffffff", 2);
+          sun.position.set(0, 0, 3);
+          scene.add(sun);
+          scene.add(new THREE.AmbientLight("#4466aa", 0.35));
+
+          const textureLoader = new THREE.TextureLoader();
+          textureLoader.setCrossOrigin("anonymous");
+          const dayTexture = textureLoader.load(earthDayMapPath);
+          dayTexture.colorSpace = THREE.SRGBColorSpace;
+
+          const sphereGeometry = new THREE.SphereGeometry(1, 96, 64);
+          const globe = new THREE.Mesh(
+            sphereGeometry,
+            new THREE.MeshPhongMaterial({
+              color: "#2d6dff",
+              map: dayTexture,
+              specular: new THREE.Color("#335577"),
+              shininess: 18,
+            })
+          );
+          globe.position.set(0, -0.5, 0);
+          globe.scale.setScalar(2.05);
+          scene.add(globe);
+
+          const atmosphere = new THREE.Mesh(
+            sphereGeometry,
+            new THREE.ShaderMaterial({
+              side: THREE.BackSide,
+              transparent: true,
+              depthWrite: false,
+              blending: THREE.AdditiveBlending,
+              uniforms: {
+                glowColor: { value: new THREE.Color("#4db2ff") },
+              },
+              vertexShader: `
+                varying vec3 vNormal;
+
+                void main() {
+                  vNormal = normalize(normalMatrix * normal);
+                  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                }
+              `,
+              fragmentShader: `
+                uniform vec3 glowColor;
+                varying vec3 vNormal;
+
+                void main() {
+                  float intensity = pow(0.72 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 2.0);
+                  gl_FragColor = vec4(glowColor, intensity * 0.72);
+                }
+              `,
+            })
+          );
+          atmosphere.position.copy(globe.position);
+          atmosphere.scale.setScalar(2.05 * 1.08);
+          scene.add(atmosphere);
+
+          const resize = () => {
+            const rect = hero.getBoundingClientRect();
+            const width = Math.max(rect.width, 1);
+            const height = Math.max(rect.height, 1);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+            renderer.setSize(width, height, false);
+          };
+
+          if ("ResizeObserver" in window) {
+            new ResizeObserver(resize).observe(hero);
+          } else {
+            window.addEventListener("resize", resize);
+          }
+          resize();
+
+          const clock = new THREE.Clock();
+          const render = () => {
+            const delta = clock.getDelta();
+            globe.rotation.y += delta * 0.025;
+            renderer.render(scene, camera);
+            window.requestAnimationFrame(render);
+          };
+
+          document.body.classList.add("is-planet-scene-ready");
+          render();
+        };
+
+        try {
+          const THREE = await import("https://unpkg.com/three/build/three.webgpu.js");
+          const {
+            step,
+            normalWorldGeometry,
+            output,
+            texture,
+            vec3,
+            vec4,
+            normalize,
+            positionWorld,
+            bumpMap,
+            cameraPosition,
+            color,
+            uniform,
+            mix,
+            uv,
+            max,
+          } = await import("https://unpkg.com/three/build/three.tsl.js");
+
+          let camera, scene, renderer, globe, timer;
+
+          const init = async () => {
+            timer = new THREE.Timer();
+            timer.connect(document);
+
+            const rect = hero.getBoundingClientRect();
+            const width = Math.max(rect.width, 1);
+            const height = Math.max(rect.height, 1);
+
+            camera = new THREE.PerspectiveCamera(25, width / height, 0.1, 100);
+            camera.position.set(4.5, 2, 3);
+
+            scene = new THREE.Scene();
+
+            const sun = new THREE.DirectionalLight("#ffffff", 2);
+            sun.position.set(0, 0, 3);
+            scene.add(sun);
+
+            const atmosphereDayColor = uniform(color("#4db2ff"));
+            const atmosphereTwilightColor = uniform(color("#bc490b"));
+            const roughnessLow = uniform(0.25);
+            const roughnessHigh = uniform(0.35);
+
+            const textureLoader = new THREE.TextureLoader();
+            textureLoader.setCrossOrigin("anonymous");
+            const dayTexture = textureLoader.load(earthDayMapPath);
+            dayTexture.colorSpace = THREE.SRGBColorSpace;
+            dayTexture.anisotropy = 8;
+
+            const nightTexture = textureLoader.load(earthDayMapPath);
+            nightTexture.colorSpace = THREE.SRGBColorSpace;
+            nightTexture.anisotropy = 8;
+
+            const bumpRoughnessCloudsTexture = textureLoader.load(earthDayMapPath);
+            bumpRoughnessCloudsTexture.anisotropy = 8;
+
+            const viewDirection = positionWorld.sub(cameraPosition).normalize();
+            const fresnel = viewDirection.dot(normalWorldGeometry).abs().oneMinus().toVar();
+
+            const sunOrientation = normalWorldGeometry.dot(normalize(sun.position)).toVar();
+
+            const atmosphereColor = mix(atmosphereTwilightColor, atmosphereDayColor, sunOrientation.smoothstep(-0.25, 0.75));
+
+            const globeMaterial = new THREE.MeshStandardNodeMaterial();
+
+            const cloudsStrength = texture(bumpRoughnessCloudsTexture, uv()).b.smoothstep(0.2, 1);
+
+            globeMaterial.colorNode = mix(texture(dayTexture), vec3(1), cloudsStrength.mul(2));
+
+            const roughness = max(texture(bumpRoughnessCloudsTexture).g, step(0.01, cloudsStrength));
+            globeMaterial.roughnessNode = roughness.remap(0, 1, roughnessLow, roughnessHigh);
+
+            const night = texture(nightTexture);
+            const dayStrength = sunOrientation.smoothstep(-0.25, 0.5);
+
+            const atmosphereDayStrength = sunOrientation.smoothstep(-0.5, 1);
+            const atmosphereMix = atmosphereDayStrength.mul(fresnel.pow(2)).clamp(0, 1);
+
+            let finalOutput = mix(night.rgb, output.rgb, dayStrength);
+            finalOutput = mix(finalOutput, atmosphereColor, atmosphereMix);
+
+            globeMaterial.outputNode = vec4(finalOutput, output.a);
+
+            const bumpElevation = max(texture(bumpRoughnessCloudsTexture).r, cloudsStrength);
+            globeMaterial.normalNode = bumpMap(bumpElevation);
+
+            const sphereGeometry = new THREE.SphereGeometry(1, 64, 64);
+            globe = new THREE.Mesh(sphereGeometry, globeMaterial);
+            globe.position.set(0, -0.5, 0);
+            globe.scale.setScalar(2.05);
+            scene.add(globe);
+
+            const atmosphereMaterial = new THREE.MeshBasicNodeMaterial({ side: THREE.BackSide, transparent: true });
+            let alpha = fresnel.remap(0.73, 1, 1, 0).pow(3);
+            alpha = alpha.mul(sunOrientation.smoothstep(-0.5, 1));
+            atmosphereMaterial.outputNode = vec4(atmosphereColor, alpha);
+
+            const atmosphere = new THREE.Mesh(sphereGeometry, atmosphereMaterial);
+            atmosphere.position.copy(globe.position);
+            atmosphere.scale.setScalar(2.05 * 1.04);
+            scene.add(atmosphere);
+
+            renderer = new THREE.WebGPURenderer({
+              canvas,
+              alpha: true,
+              antialias: true,
+            });
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.setSize(width, height, false);
+            renderer.setAnimationLoop(animate);
+
+            if (renderer.init) {
+              await renderer.init();
+            }
+
+            document.body.classList.add("is-planet-scene-ready");
+
+            const onWindowResize = () => {
+              const nextRect = hero.getBoundingClientRect();
+              const nextWidth = Math.max(nextRect.width, 1);
+              const nextHeight = Math.max(nextRect.height, 1);
+
+              camera.aspect = nextWidth / nextHeight;
+              camera.updateProjectionMatrix();
+              renderer.setSize(nextWidth, nextHeight, false);
+            };
+
+            if ("ResizeObserver" in window) {
+              new ResizeObserver(onWindowResize).observe(hero);
+            } else {
+              window.addEventListener("resize", onWindowResize);
+            }
+          };
+
+          const animate = () => {
+            timer.update();
+
+            const delta = timer.getDelta();
+            globe.rotation.y += delta * 0.025;
+
+            renderer.render(scene, camera);
+          };
+
+          await init();
+        } catch (error) {
+          console.warn("Planet scene unavailable", error);
+          await initEarthFallbackScene();
+        }
+      };
+
+      const initPlanetSceneStable = async () => {
+        if (isPlanetSceneInitialized) {
+          document.body.classList.add("is-planet-scene-ready");
+          return;
+        }
+
+        const canvas = document.querySelector(".planet-scene");
+        const hero = document.querySelector(".hero");
+        if (!canvas || !hero) return;
+
+        try {
+          const THREE = await import("https://unpkg.com/three/build/three.module.js");
+          const renderer = new THREE.WebGLRenderer({
+            canvas,
+            alpha: true,
+            antialias: true,
+            powerPreference: "high-performance",
+          });
+          const normalPixelRatio = Math.min(window.devicePixelRatio, 1.6);
+          const closingPixelRatio = Math.min(window.devicePixelRatio, 1.15);
+          renderer.setPixelRatio(normalPixelRatio);
+          renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+          const scene = new THREE.Scene();
+          const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100);
+          camera.position.set(0, 0.15, 7);
+
+          const sun = new THREE.DirectionalLight("#ffffff", 3.2);
+          sun.position.set(-3, 2, 4);
+          scene.add(sun);
+          scene.add(new THREE.HemisphereLight("#8fb7ff", "#050816", 0.65));
+
+          const textureLoader = new THREE.TextureLoader();
+          const earthMap = textureLoader.load("imgs/earthearth.png");
+          earthMap.colorSpace = THREE.SRGBColorSpace;
+          earthMap.anisotropy = renderer.capabilities.getMaxAnisotropy();
+
+          const earthGeometry = new THREE.SphereGeometry(1.72, 96, 48);
+          const earth = new THREE.Mesh(
+            earthGeometry,
+            new THREE.MeshStandardMaterial({
+              color: "#ffffff",
+              map: earthMap,
+              roughness: 0.58,
+              metalness: 0,
+            })
+          );
+          earth.position.set(0, -0.85, 0);
+          earth.rotation.set(0.05, -0.85, 0);
+          scene.add(earth);
+
+          const dragState = {
+            isDragging: false,
+            lastX: 0,
+            lastY: 0,
+          };
+
+          hero.addEventListener("pointermove", (event) => {
+            if (!dragState.isDragging) return;
+
+            const deltaX = event.clientX - dragState.lastX;
+            const deltaY = event.clientY - dragState.lastY;
+            earth.rotation.y += deltaX * 0.006;
+            earth.rotation.x += deltaY * 0.004;
+            earth.rotation.x = Math.max(-0.65, Math.min(0.65, earth.rotation.x));
+            dragState.lastX = event.clientX;
+            dragState.lastY = event.clientY;
+          });
+
+          hero.addEventListener("pointerdown", (event) => {
+            if (event.target.closest(".hero__content")) return;
+
+            dragState.isDragging = true;
+            dragState.lastX = event.clientX;
+            dragState.lastY = event.clientY;
+            hero.setPointerCapture(event.pointerId);
+          });
+
+          hero.addEventListener("pointerup", (event) => {
+            dragState.isDragging = false;
+            if (hero.hasPointerCapture(event.pointerId)) {
+              hero.releasePointerCapture(event.pointerId);
+            }
+          });
+
+          hero.addEventListener("pointerleave", () => {
+            dragState.isDragging = false;
+          });
+
+          let isSmallViewport = false;
+
+          const resize = () => {
+            const rect = hero.getBoundingClientRect();
+            const width = Math.max(rect.width, 1);
+            const height = Math.max(rect.height, 1);
+            const isSmall = width < 720;
+            isSmallViewport = isSmall;
+
+            renderer.setSize(width, height, false);
+            camera.aspect = width / height;
+            camera.fov = isSmall ? 42 : 34;
+            camera.position.z = isSmall ? 8.2 : 7;
+            earth.scale.setScalar(isSmall ? 0.78 : 1);
+            camera.updateProjectionMatrix();
+          };
+
+          if ("ResizeObserver" in window) {
+            new ResizeObserver(resize).observe(hero);
+          } else {
+            window.addEventListener("resize", resize);
+          }
+          resize();
+
+          const clock = new THREE.Clock();
+          const closeTransition = {
+            isActive: false,
+            progress: 0,
+            startRotationX: 0,
+            startRotationY: 0,
+            targetRotationX: 0,
+            targetRotationY: 0,
+          };
+          const baseEarthPositionY = -0.85;
+          const closeTransitionDuration = 7.2;
+          const focusLocations = {
+            ko: { lat: 36.5, lon: 127.8 },
+            ja: { lat: 36.2, lon: 138.2 },
+            en: { lat: 39.8, lon: -98.6 },
+          };
+
+          const getFocusRotation = (language) => {
+            const location = focusLocations[language] || focusLocations.ko;
+            const latitude = THREE.MathUtils.degToRad(location.lat);
+            const longitude = THREE.MathUtils.degToRad(location.lon);
+
+            return {
+              x: Math.max(-0.65, Math.min(0.65, latitude * 0.72)),
+              y: -longitude - Math.PI / 2,
+            };
+          };
+
+          const shortestRotationDelta = (from, to) => {
+            let delta = (to - from) % (Math.PI * 2);
+            if (delta > Math.PI) delta -= Math.PI * 2;
+            if (delta < -Math.PI) delta += Math.PI * 2;
+            return delta;
+          };
+
+          triggerPlanetClose = (language) => {
+            const targetRotation = getFocusRotation(language);
+            renderer.setPixelRatio(closingPixelRatio);
+            closeTransition.isActive = true;
+            closeTransition.progress = 0;
+            closeTransition.startRotationX = earth.rotation.x;
+            closeTransition.startRotationY = earth.rotation.y;
+            closeTransition.targetRotationX = targetRotation.x;
+            closeTransition.targetRotationY = earth.rotation.y + shortestRotationDelta(earth.rotation.y, targetRotation.y);
+          };
+
+          resetPlanetScene = () => {
+            closeTransition.isActive = false;
+            closeTransition.progress = 0;
+            renderer.setPixelRatio(normalPixelRatio);
+            earth.position.y = baseEarthPositionY;
+            earth.scale.setScalar(isSmallViewport ? 0.78 : 1);
+          };
+
+          const render = () => {
+            const delta = clock.getDelta();
+
+            if (closeTransition.isActive) {
+              closeTransition.progress = Math.min(closeTransition.progress + delta / closeTransitionDuration, 1);
+              const eased = closeTransition.progress * closeTransition.progress * (3 - 2 * closeTransition.progress);
+              earth.scale.setScalar((isSmallViewport ? 0.78 : 1) + eased * 8.2);
+              earth.position.y = baseEarthPositionY + eased * 0.45;
+              earth.rotation.x =
+                closeTransition.startRotationX +
+                (closeTransition.targetRotationX - closeTransition.startRotationX) * eased;
+              earth.rotation.y =
+                closeTransition.startRotationY +
+                (closeTransition.targetRotationY - closeTransition.startRotationY) * eased;
+
+            } else if (!dragState.isDragging) {
+              earth.rotation.y += delta * 0.08;
+            }
+
+            camera.position.x = 0;
+            camera.position.y = 0.15;
+            camera.lookAt(0, -0.65, 0);
+
+            renderer.render(scene, camera);
+            window.requestAnimationFrame(render);
+          };
+
+          document.body.classList.add("is-planet-scene-ready");
+          isPlanetSceneInitialized = true;
+          render();
+        } catch (error) {
+          console.warn("Planet scene unavailable", error);
+        }
+      };
+
+      const mainActionLabels = {
+        ko: {
+          works: "작업물 보기",
+          about: "자기소개",
+          contact: "연락하기",
+        },
+        ja: {
+          works: "作業物を見る",
+          about: "自己紹介",
+          contact: "連絡を取る",
+        },
+        en: {
+          works: "Portfolio",
+          about: "About me",
+          contact: "Contact",
+        },
+      };
+
+      const workCardCopies = {
+        ko: [
+          {
+            title: "11번가",
+            description: "복잡한 쇼핑 경험을 한 눈에 들어오게 개선한 11번가 리디자인.",
+          },
+          {
+            title: "집사인생",
+            description: "기록과 인공지능 분석을 통해 우리 반려동물의 건강 변화를 관리하는 케어 앱.",
+          },
+          {
+            title: "누비오",
+            description: "인공지능을 활용해서 언어의 뉘앙스를 익히는 미션형 언어 학습 앱.",
+          },
+          {
+            title: "줌",
+            description: "회의 목록 탐색성과 접근성을 개선한 줌 리디자인.",
+          },
+          {
+            title: "페양그",
+            description: "브랜드의 제품 경험을 더 명확하게 전달하는 웹 리디자인.",
+          },
+          {
+            title: "시몬스 코리아",
+            description: "프리미엄 침대 브랜드의 분위기와 구매 흐름을 개선한 웹 리디자인.",
+          },
+        ],
+        ja: [
+          {
+            title: "11番街",
+            description: "複雑なショッピング体験を一目で分かるように改善した11番街のリデザイン。",
+          },
+          {
+            title: "執事人生",
+            description: "記録とAI分析でペットの健康変化を管理するケアアプリ。",
+          },
+          {
+            title: "ヌビオ",
+            description: "AIを活用して言葉のニュアンスを学ぶミッション型言語学習アプリ。",
+          },
+          {
+            title: "Zoom",
+            description: "会議リストの探索性とアクセシビリティを改善したZoomリデザイン。",
+          },
+          {
+            title: "ペヤング",
+            description: "ブランドの商品体験をより分かりやすく伝えるWebリデザイン。",
+          },
+          {
+            title: "シモンズコリア",
+            description: "プレミアムベッドブランドの雰囲気と購入導線を改善したWebリデザイン。",
+          },
+        ],
+        en: [
+          {
+            title: "11st",
+            description: "A redesign of 11st that makes a complex shopping experience easier to scan.",
+          },
+          {
+            title: "Jipsa Life",
+            description: "A care app that tracks pet health changes through records and AI analysis.",
+          },
+          {
+            title: "Nubio",
+            description: "A mission-based language learning app for practicing nuance with AI.",
+          },
+          {
+            title: "Zoom",
+            description: "A Zoom redesign improving meeting list navigation and accessibility.",
+          },
+          {
+            title: "Peyoung",
+            description: "A web redesign that communicates the brand's product experience more clearly.",
+          },
+          {
+            title: "Simmons Korea",
+            description: "A web redesign improving the mood and purchase flow of a premium bed brand.",
+          },
+        ],
+      };
+
+      const workBadgeCopies = {
+        ko: {
+          personal: "개인작업",
+          team: "팀 작업",
+          teamCompact: "팀작업",
+          planning: "기획서",
+          figma: "(피그마)",
+          web: "(웹)",
+        },
+        ja: {
+          personal: "個人",
+          team: "チーム",
+          teamCompact: "チーム",
+          planning: "企画書",
+          figma: "(Figma)",
+          web: "(Web)",
+        },
+        en: {
+          personal: "Personal",
+          team: "Team",
+          teamCompact: "Team",
+          planning: "Planning",
+          figma: "(Figma)",
+          web: "(Web)",
+        },
+      };
+
+      const workBadgeOrder = [
+        ["personal", "figma"],
+        ["teamCompact", "web"],
+        ["planning", "figma"],
+        ["personal", "figma"],
+        ["personal", "figma"],
+        ["personal", "figma"],
+        ["team", "web"],
+        ["planning", "figma"],
+      ];
+
+      const updateMainActionLabels = (language) => {
+        mainActionButtons.forEach((button) => {
+          const action = button.dataset.mainAction;
+          button.textContent = mainActionLabels[language][action];
+        });
+      };
+
+      const updateWorkLanguage = (language) => {
+        const copySet = workCardCopies[language] || workCardCopies.ko;
+        const badgeSet = workBadgeCopies[language] || workBadgeCopies.ko;
+
+        document.querySelectorAll(".work-card").forEach((card, index) => {
+          const copy = copySet[index];
+          if (!copy) return;
+
+          const title = card.querySelector(".work-card-copy h3");
+          const description = card.querySelector(".work-card-copy p");
+          if (title) title.textContent = copy.title;
+          if (description) description.textContent = copy.description;
+        });
+
+        document.querySelectorAll(".work-link-badge > span:first-child").forEach((badge, index) => {
+          const [labelKey, metaKey] = workBadgeOrder[index] || workBadgeOrder[0];
+          badge.replaceChildren(
+            document.createTextNode(badgeSet[labelKey]),
+            document.createElement("br"),
+            Object.assign(document.createElement("span"), {
+              className: "work-link-meta",
+              textContent: badgeSet[metaKey],
+            })
+          );
+        });
+      };
+
+      const updateMainBackground = (language) => {
+        mainBackgrounds.forEach((background) => {
+          background.classList.toggle("is-active", background.classList.contains(`korea-main-bg--${language}`));
+        });
+      };
 
       const setMainLanguage = (language) => {
         document.body.dataset.mainLanguage = language;
 
-        mainBackgrounds.forEach((background) => {
-          background.classList.toggle("is-active", background.classList.contains(`korea-main-bg--${language}`));
-        });
+        if (!document.body.classList.contains("is-works-visible")) {
+          updateMainBackground(language);
+        }
 
         mainLanguageButtons.forEach((button) => {
           button.classList.toggle("is-active", button.dataset.mainLanguage === language);
         });
+
+        updateMainActionLabels(language);
+        updateWorkLanguage(language);
+      };
+
+      const setWorksSlide = (nextIndex) => {
+        if (!worksSlides.length) return;
+
+        activeWorksSlide = (nextIndex + worksSlides.length) % worksSlides.length;
+        worksGallery.dataset.activeSlide = String(activeWorksSlide);
+
+        worksSlides.forEach((slide, index) => {
+          slide.classList.toggle("is-active", index === activeWorksSlide);
+          slide.style.transition = "";
+          slide.style.transform = "";
+        });
+
+        worksIndicatorDots.forEach((dot, index) => {
+          dot.classList.toggle("is-active", index === activeWorksSlide);
+        });
+      };
+
+      const setGuideCharacterMode = (isCalling) => {
+        if (!guideCharacter) return;
+        guideCharacter.classList.toggle("is-call-character", isCalling);
+      };
+
+      const waitForTitle = (delay) =>
+        new Promise((resolve) => {
+          titleTypingTimer = window.setTimeout(resolve, delay);
+        });
+
+      const typeTitle = async (language) => {
+        if (activeTitleLanguage === language) return;
+
+        const runId = (titleTypingRun += 1);
+        const nextTitle = titleLabels[language];
+        activeTitleLanguage = language;
+        window.clearTimeout(titleTypingTimer);
+        titleText.classList.add("is-typing");
+        currentTitleText = "";
+        titleText.textContent = "";
+        await waitForTitle(50);
+
+        for (const letter of Array.from(nextTitle)) {
+          if (runId !== titleTypingRun) return;
+          currentTitleText += letter;
+          titleText.textContent = currentTitleText;
+
+          const isPunctuation = /[.,。]/.test(letter);
+          const delay = isPunctuation ? 140 : 72;
+          await waitForTitle(delay);
+        }
+
+        if (runId === titleTypingRun) {
+          titleText.classList.remove("is-typing");
+        }
       };
 
       languageButtons.forEach((button) => {
-        button.addEventListener("click", () => {
+        button.addEventListener("mouseenter", () => {
+          typeTitle(button.dataset.language);
+        });
+
+        button.addEventListener("focus", () => {
+          typeTitle(button.dataset.language);
+        });
+      });
+
+      languageButtonGroup.addEventListener("mouseleave", () => {
+        typeTitle("ko");
+      });
+
+      languageButtonGroup.addEventListener("focusout", (event) => {
+        if (!languageButtonGroup.contains(event.relatedTarget)) {
+          typeTitle("ko");
+        }
+      });
+
+      languageButtons.forEach((button) => {
+        button.addEventListener("click", async () => {
           if (document.body.classList.contains("is-earth-closing")) return;
 
           document.body.dataset.selectedLanguage = button.dataset.language;
@@ -198,22 +1178,46 @@
             languageButton.disabled = true;
           });
 
-          nextScreenTimer = window.setTimeout(() => {
+          triggerPlanetClose(button.dataset.language);
+          window.setTimeout(() => {
             document.body.classList.add("is-next-visible");
-          }, transitionDuration);
+          }, 3600);
         });
       });
 
-      window.addEventListener("pageshow", () => {
+      window.addEventListener("pageshow", async () => {
         window.clearTimeout(nextScreenTimer);
         document.body.classList.remove("is-earth-closing");
         document.body.classList.remove("is-next-visible");
         document.body.classList.remove("is-korea-main-visible");
+        document.body.classList.remove("is-works-visible");
+        document.body.classList.remove("is-contact-visible");
+        document.body.classList.remove("is-hero-controls-visible");
+        document.body.classList.remove("is-planet-scene-ready");
+        resetPlanetScene();
         delete document.body.dataset.selectedLanguage;
         delete document.body.dataset.mainLanguage;
+        window.clearTimeout(titleTypingTimer);
+        activeTitleLanguage = "";
+        titleText.replaceChildren();
+        currentTitleText = "";
+        await initPlanetSceneStable();
+        window.setTimeout(() => {
+          document.body.classList.add("is-hero-controls-visible");
+          window.setTimeout(() => {
+            typeTitle("ko");
+          }, 260);
+        }, 1500);
         languageButtons.forEach((button) => {
           button.disabled = false;
         });
+        mainActionButtons.forEach((button) => {
+          button.classList.remove("is-active");
+        });
+        if (guideCharacter) {
+          setGuideCharacterMode(false);
+        }
+        setWorksSlide(0);
         setMainLanguage("ko");
       });
 
@@ -225,14 +1229,129 @@
 
       mainActionButtons.forEach((button) => {
         button.addEventListener("click", () => {
-          const isContact = button.dataset.mainAction === "contact";
-          document.body.classList.toggle("is-contact-visible", isContact);
+          const selectedAction = button.dataset.mainAction;
+          const isWorks = selectedAction === "works";
+          const isContact = selectedAction === "contact";
+          const isAlreadyActive = button.classList.contains("is-active");
+          const shouldShowWorks = isWorks && !isAlreadyActive;
+          const shouldShowContact = isContact && !isAlreadyActive;
+
+          document.body.classList.toggle("is-works-visible", shouldShowWorks);
+          document.body.classList.toggle("is-contact-visible", shouldShowContact);
+          setGuideCharacterMode(shouldShowContact);
+
+          if (!shouldShowWorks) {
+            updateMainBackground(document.body.dataset.mainLanguage || "ko");
+          }
 
           mainActionButtons.forEach((actionButton) => {
-            actionButton.classList.toggle("is-active", actionButton === button && isContact);
+            actionButton.classList.toggle(
+              "is-active",
+              actionButton === button && (shouldShowWorks || shouldShowContact)
+            );
           });
         });
       });
+
+      worksNavButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const direction = Number(button.dataset.worksDirection);
+          setWorksSlide(activeWorksSlide + direction);
+        });
+      });
+
+      worksIndicatorDots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          setWorksSlide(Number(dot.dataset.worksSlide));
+        });
+      });
+
+      if (worksGallery) {
+        const dragState = {
+          isPointerDown: false,
+          didDrag: false,
+          startX: 0,
+          startY: 0,
+          activeSlideElement: null,
+        };
+        const dragThreshold = 70;
+        const resetDraggedSlide = () => {
+          if (!dragState.activeSlideElement) return;
+          dragState.activeSlideElement.style.transition = "";
+          dragState.activeSlideElement.style.transform = "";
+          dragState.activeSlideElement = null;
+        };
+
+        worksGallery.addEventListener("pointerdown", (event) => {
+          if (!document.body.classList.contains("is-works-visible")) return;
+          if (event.target.closest(".works-nav")) return;
+
+          dragState.isPointerDown = true;
+          dragState.didDrag = false;
+          dragState.startX = event.clientX;
+          dragState.startY = event.clientY;
+          dragState.activeSlideElement = worksSlides[activeWorksSlide];
+          if (dragState.activeSlideElement) {
+            dragState.activeSlideElement.style.transition = "none";
+          }
+          worksGallery.setPointerCapture(event.pointerId);
+        });
+
+        worksGallery.addEventListener("pointermove", (event) => {
+          if (!dragState.isPointerDown) return;
+
+          const deltaX = event.clientX - dragState.startX;
+          const deltaY = event.clientY - dragState.startY;
+          if (Math.abs(deltaX) > 8 && Math.abs(deltaX) > Math.abs(deltaY)) {
+            dragState.didDrag = true;
+            event.preventDefault();
+          }
+
+          if (dragState.didDrag) {
+            const limitedDeltaX = Math.max(-180, Math.min(180, deltaX));
+            if (dragState.activeSlideElement) {
+              dragState.activeSlideElement.style.transform = `translateX(${limitedDeltaX}px)`;
+            }
+          }
+        });
+
+        worksGallery.addEventListener("pointerup", (event) => {
+          if (!dragState.isPointerDown) return;
+
+          const deltaX = event.clientX - dragState.startX;
+          dragState.isPointerDown = false;
+
+          if (worksGallery.hasPointerCapture(event.pointerId)) {
+            worksGallery.releasePointerCapture(event.pointerId);
+          }
+
+          if (Math.abs(deltaX) >= dragThreshold) {
+            resetDraggedSlide();
+            setWorksSlide(activeWorksSlide + (deltaX < 0 ? 1 : -1));
+          } else {
+            resetDraggedSlide();
+          }
+        });
+
+        worksGallery.addEventListener("pointercancel", (event) => {
+          dragState.isPointerDown = false;
+          resetDraggedSlide();
+          if (worksGallery.hasPointerCapture(event.pointerId)) {
+            worksGallery.releasePointerCapture(event.pointerId);
+          }
+        });
+
+        worksGallery.addEventListener(
+          "click",
+          (event) => {
+            if (!dragState.didDrag) return;
+            event.preventDefault();
+            event.stopPropagation();
+            dragState.didDrag = false;
+          },
+          true
+        );
+      }
 
       portfolioCta.addEventListener("click", (event) => {
         const selectedLanguage = document.body.dataset.selectedLanguage;
