@@ -1284,7 +1284,7 @@
 
         worksGallery.addEventListener("pointerdown", (event) => {
           if (!document.body.classList.contains("is-works-visible")) return;
-          if (event.target.closest(".works-nav")) return;
+          if (event.target.closest("a, button")) return;
 
           dragState.isPointerDown = true;
           dragState.didDrag = false;
